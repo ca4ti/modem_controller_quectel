@@ -1,10 +1,4 @@
-Você está certo\! Vou corrigir o `README.md` para remover as referências a `bkp7` e `bkp8`, e garantir que o link do repositório esteja correto.
 
-Aqui está o conteúdo atualizado do seu `README.md`. Por favor, apague o conteúdo atual do seu arquivo `README.md` e cole o texto abaixo.
-
------
-
-````markdown
 # Quectel EC25 - Painel de Controle AT
 
 [![Python 3.x](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/)
@@ -173,4 +167,3 @@ SOFTWARE.
 ## Contato
 
 Carlos Alberto - [Telefone/WhatsApp] +55 11 2615-2880
-````
