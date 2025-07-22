@@ -1,0 +1,305 @@
+[
+    {
+        "cmd": "ATI",
+        "type": "Execution",
+        "desc": "Display Product Identification Information",
+        "params": [],
+        "response_format": "Quectel\nEC2x\nRevision: <revision>\nOK",
+        "section": "2.1"
+    },
+    {
+        "cmd": "AT+CGSN",
+        "type": "Execution",
+        "desc": "Request Product Serial Number Identification (IMEI)",
+        "params": [],
+        "response_format": "<IMEI>\nOK",
+        "section": "2.9"
+    },
+    {
+        "cmd": "AT+CIMI",
+        "type": "Execution",
+        "desc": "Request International Mobile Subscriber Identity (IMSI)",
+        "params": [],
+        "response_format": "<IMSI>\nOK",
+        "section": "5.1"
+    },
+    {
+        "cmd": "AT+QCCID",
+        "type": "Execution",
+        "desc": "Show ICCID",
+        "params": [],
+        "response_format": "+QCCID: <iccid>\nOK",
+        "section": "5.7"
+    },
+    {
+        "cmd": "AT+CSQ",
+        "type": "Execution",
+        "desc": "Signal Quality Report (RSSI, BER)",
+        "params": [],
+        "response_format": "+CSQ: <rssi>,<ber>\nOK",
+        "section": "6.3"
+    },
+    {
+        "cmd": "AT+QNWINFO",
+        "type": "Execution",
+        "desc": "Query Network Information (Technology, Operator, Band, Channel)",
+        "params": [],
+        "response_format": "+QNWINFO: <Act>,<oper>,<band>,<channel>\nOK",
+        "section": "6.9"
+    },
+    {
+        "cmd": "AT+CREG?",
+        "type": "Read",
+        "desc": "Network Registration Status",
+        "params": [],
+        "response_format": "+CREG: <n>,<stat>[,<lac>,<ci>[,<Act>]]\nOK",
+        "section": "6.2"
+    },
+    {
+        "cmd": "AT+CGDCONT",
+        "type": "Write",
+        "desc": "Define PDP Context",
+        "params": ["cid", "PDP_type", "APN", "PDP_addr", "data_comp", "head_comp"],
+        "section": "10.2"
+    },
+    {
+        "cmd": "AT+CGACT",
+        "type": "Write",
+        "desc": "Activate or Deactivate PDP Context",
+        "params": ["state", "cid"],
+        "section": "10.7"
+    },
+    {
+        "cmd": "AT+CGPADDR",
+        "type": "Write",
+        "desc": "Show PDP Address",
+        "params": ["cid"],
+        "response_format": "+CGPADDR: <cid>,<PDP_addr>\nOK",
+        "section": "10.9"
+    },
+    {
+        "cmd": "AT+QCFG=\"band\"",
+        "type": "Write",
+        "desc": "Band Configuration (GSM/WCDMA, LTE, TD-SCDMA)",
+        "params": ["bandval", "ltebandval", "tdsbandval", "effect"],
+        "section": "4.3.6"
+    },
+    {
+        "cmd": "AT+CMGF",
+        "type": "Write",
+        "desc": "Message Format (PDU/Text mode)",
+        "params": ["mode"],
+        "section": "9.2"
+    },
+    {
+        "cmd": "AT+CMGS",
+        "type": "Write",
+        "desc": "Send Message",
+        "params": ["da", "toda"],
+        "section": "9.8"
+    },
+    {
+        "cmd": "AT+CMGL",
+        "type": "Write",
+        "desc": "List Messages",
+        "params": ["stat"],
+        "section": "9.6"
+    },
+    {
+        "cmd": "AT+CMGR",
+        "type": "Write",
+        "desc": "Read Message",
+        "params": ["index"],
+        "section": "9.7"
+    },
+    {
+        "cmd": "AT+CMGD",
+        "type": "Write",
+        "desc": "Delete Message",
+        "params": ["index", "delflag"],
+        "section": "9.5"
+    },
+    {
+        "cmd": "ATD",
+        "type": "Execution",
+        "desc": "Mobile Originated Call to Dial a Number",
+        "params": ["n", "mgsm"],
+        "section": "7.2"
+    },
+    {
+        "cmd": "ATA",
+        "type": "Execution",
+        "desc": "Answer an Incoming Call",
+        "params": [],
+        "section": "7.1"
+    },
+    {
+        "cmd": "ATH",
+        "type": "Execution",
+        "desc": "Disconnect Existing Connection",
+        "params": ["n"],
+        "section": "7.3"
+    },
+    {
+        "cmd": "AT+CLCC",
+        "type": "Execution",
+        "desc": "List Current Calls of ME",
+        "params": [],
+        "response_format": "+CLCC: <id>,<dir>,<stat>,<mode>,<mpty>[,<number>,<type>[,<alpha>]]\nOK",
+        "section": "7.15"
+    },
+    {
+        "cmd": "AT+CLVL",
+        "type": "Write",
+        "desc": "Loudspeaker Volume Level Selection",
+        "params": ["level"],
+        "section": "12.1"
+    },
+    {
+        "cmd": "AT+CMUT",
+        "type": "Write",
+        "desc": "Mute Control (Mic uplink)",
+        "params": ["n"],
+        "section": "12.2"
+    },
+    {
+        "cmd": "AT+QAUDLOOP",
+        "type": "Write",
+        "desc": "Enable/Disable Audio Loop Test",
+        "params": ["enable"],
+        "section": "12.3"
+    },
+    {
+        "cmd": "AT+QAUDMOD",
+        "type": "Write",
+        "desc": "Set Audio Mode (Handset, Headset, Speaker)",
+        "params": ["mode"],
+        "section": "12.6"
+    },
+    {
+        "cmd": "AT+QMIC",
+        "type": "Write",
+        "desc": "Set Uplink Gains of MIC",
+        "params": ["txgain", "txdgain"],
+        "section": "12.10"
+    },
+    {
+        "cmd": "AT+QRXGAIN",
+        "type": "Write",
+        "desc": "Set Downlink Gains of RX",
+        "params": ["rxgain"],
+        "section": "12.11"
+    },
+    {
+        "cmd": "AT+QDAI",
+        "type": "Write",
+        "desc": "Digital Audio Interface Configuration (PCM)",
+        "params": ["io_mode", "mode", "fsync", "clock", "format", "sample", "num_slots", "slot_mapping"],
+        "section": "12.7"
+    },
+    {
+        "cmd": "AT+CCLK",
+        "type": "Read",
+        "desc": "Clock (Read Time)",
+        "params": [],
+        "response_format": "+CCLK: <time>\nOK",
+        "section": "13.2"
+    },
+    {
+        "cmd": "AT+CBC",
+        "type": "Execution",
+        "desc": "Battery Charge Status",
+        "params": [],
+        "response_format": "+CBC: <bcs>,<bcl>,<voltage>\nOK",
+        "section": "13.3"
+    },
+    {
+        "cmd": "AT+QADC",
+        "type": "Write",
+        "desc": "Read ADC Value",
+        "params": ["channel"],
+        "response_format": "+QADC: <status>,<value>\nOK",
+        "section": "13.4"
+    },
+    {
+        "cmd": "AT+QPOWD",
+        "type": "Execution",
+        "desc": "Power off Modem",
+        "params": ["n"],
+        "section": "13.1"
+    },
+    {
+        "cmd": "AT+QSIMSTAT",
+        "type": "Read",
+        "desc": "(U)SIM Card Insertion Status Report",
+        "params": [],
+        "response_format": "+QSIMSTAT: <enable>,<inserted_status>\nOK",
+        "section": "5.11"
+    },
+    {
+        "cmd": "AT+QMBNCFG=\"List\"",
+        "type": "Execution",
+        "desc": "List MBN Configurations",
+        "params": [],
+        "response_format": "+QMBNCFG: \"List\",<index>,<active>,<type>,\"<config_name>\",<config_id>,<version_id>\\nOK",
+        "section": "Special/VoLTE"
+    },
+    {
+        "cmd": "AT+QCFG=\"nwscanmode\"",
+        "type": "Write",
+        "desc": "Network Search Mode Configuration (2G/3G/4G/Auto)",
+        "params": ["scanmode", "effect"],
+        "section": "4.3.2"
+    },
+    {
+        "cmd": "AT+QCFG=\"roamservice\"",
+        "type": "Write",
+        "desc": "Roam Service Configuration (Enable/Disable)",
+        "params": ["roammode", "effect"],
+        "section": "4.3.4"
+    },
+    {
+        "cmd": "AT+QURCCFG=\"urcport\"",
+        "type": "Write",
+        "desc": "Configure URC Indication Output Port",
+        "params": ["urcportvalue"],
+        "section": "2.25"
+    },
+    {
+        "cmd": "AT+QGPS",
+        "type": "Write",
+        "desc": "Enable/Disable GPS",
+        "params": ["mode"],
+        "section": "GPS"
+    },
+    {
+        "cmd": "AT+QGPSLOC?",
+        "type": "Read",
+        "desc": "Get GPS Location",
+        "params": [],
+        "response_format": "+QGPSLOC: <latitude>,<longitude>,<altitude>,<speed>,<course>,<timestamp>,<horiz_precision>,<vert_precision>,<hdop>,<pdop>,<vdop>,<sats_used>\\nOK",
+        "section": "GPS"
+    },
+    {
+        "cmd": "AT+QGPSCFG=\"outport\"",
+        "type": "Write",
+        "desc": "Set GPS NMEA Output Port",
+        "params": ["outport"],
+        "section": "GPS"
+    },
+    {
+        "cmd": "AT+QCFG=\"USBCFG\"",
+        "type": "Read",
+        "desc": "Read USB Configuration (DM, NMEA, Modem, ADB, UAC, RNDIS)",
+        "params": [],
+        "response_format": "+QCFG: \"USBCFG\",<vid>,<pid>,<bcdDevice>,<func_cfg>,<usb_composition>,<pwr_det>,<rtc_alarm>,<dbg_port>,<nmea_port>,<mod_port>,<adb_port>,<uac_port>,<rndis_port>\\nOK",
+        "section": "USB Interface"
+    },
+    {
+        "cmd": "AT+QPCMV",
+        "type": "Write",
+        "desc": "Enable/Disable Voice over USB (PCM data transfer)",
+        "params": ["enable", "port"],
+        "section": "Audio"
+    }
+]
