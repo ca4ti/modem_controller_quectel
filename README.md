@@ -1,3 +1,10 @@
+Você está certo\! Vou corrigir o `README.md` para remover as referências a `bkp7` e `bkp8`, e garantir que o link do repositório esteja correto.
+
+Aqui está o conteúdo atualizado do seu `README.md`. Por favor, apague o conteúdo atual do seu arquivo `README.md` e cole o texto abaixo.
+
+-----
+
+````markdown
 # Quectel EC25 - Painel de Controle AT
 
 [![Python 3.x](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/)
@@ -62,7 +69,7 @@ O Painel de Controle AT abrange uma ampla gama de funcionalidades do modem Quect
 
 ## ✨ Destaques da Arquitetura e Melhorias Atuais
 
-Este projeto (`bkp8`) representa uma evolução significativa em relação a versões anteriores (`bkp_orig`/`bkp7`), com foco em modularidade, robustez e responsividade:
+Este projeto representa uma evolução significativa, com foco em modularidade, robustez e responsividade:
 
 * **Modularização Aprimorada:** O código é estritamente organizado em módulos e subpacotes, tornando-o mais limpo e fácil de manter.
 * **Comunicação Serial Centralizada:** A leitura da porta serial foi centralizada em uma única thread dentro do `ModemController`, resolvendo condições de corrida (`race conditions`) e problemas onde o monitor de URCs "roubava" dados das respostas de comandos.
@@ -98,10 +105,10 @@ Embora o código tenha evoluído significativamente, algumas limitações e bugs
 
 1.  **Clone o repositório (ou crie a pasta do projeto):**
     ```bash
-    git clone [https://github.com/seu_usuario/modem_controller.git](https://github.com/seu_usuario/modem_controller.git) # Substitua pelo URL real do seu repositório
-    cd modem_controller_v2 # Entre na nova pasta do projeto
+    git clone [https://github.com/ca4ti/modem_controller_quectel.git](https://github.com/ca4ti/modem_controller_quectel.git)
+    cd modem_controller_quectel # Entre na nova pasta do projeto
     ```
-    *Se você está copiando os arquivos manualmente para uma nova pasta, certifique-se de que a estrutura `modem_controller_v2/src/...` e `modem_controller_v2/resources/...` esteja correta.*
+    *Se você está copiando os arquivos manualmente para uma nova pasta, certifique-se de que a estrutura `modem_controller_quectel/src/...` e `modem_controller_quectel/resources/...` esteja correta.*
 
 2.  **Crie e ative um ambiente virtual (opcional, mas altamente recomendado):**
     ```bash
@@ -123,7 +130,7 @@ Embora o código tenha evoluído significativamente, algumas limitações e bugs
     * Certifique-se de que o modem esteja ligado e os drivers estejam instalados.
 
 2.  **Execute o script principal:**
-    Navegue até a pasta raiz do projeto (`modem_controller_v2`):
+    Navegue até a pasta raiz do projeto (`modem_controller_quectel`):
     ```bash
     python -m src.main
     ```
@@ -166,3 +173,4 @@ SOFTWARE.
 ## Contato
 
 Carlos Alberto - [Telefone/WhatsApp] +55 11 2615-2880
+````
